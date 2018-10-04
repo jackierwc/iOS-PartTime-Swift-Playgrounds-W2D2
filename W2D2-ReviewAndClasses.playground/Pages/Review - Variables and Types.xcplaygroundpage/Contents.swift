@@ -10,7 +10,7 @@
 
 var greeting = "Hello"
 var count = 10
-var mph = 87.9
+var mph = 89.9
 
 //: We use these variables instead of working with raw data. Instead of writing things out "hard-coded" like so:
 
@@ -25,7 +25,7 @@ mph + 0.1
 //: ### Challenge 1
 //:
 //: Change the value in `mph` to be equal to 90, use the assignment operator `=`.
-
+mph = 90
 
 
 
@@ -33,14 +33,15 @@ mph + 0.1
 //:
 //: The `greeting` variable contains a greeting. Change the value in `greeting` to include your name. i.e. if greeting contained "Hello" and your name is "Danny", then it should now contain "Hello, Danny".
 
-greeting = "Hello"
+greeting = greeting + ", Jackie"
 
-
+print (greeting)
 
 
 //: Note: Make sure to do this in such a way that changing the value of `greeting` to "Aloha" changes the value here to be "Aloha, Danny"
-
-
+greeting = "Aloha"
+greeting = greeting + ", Jackie"
+print (greeting)
 
 //: ## Types
 //: Option-click on any variable's name, wherever it's written, to see it's type. We've seen a few basic types so far. `String` for bits of text ("aloha!"), `Int` for whole numbers (3), and `Double` for numbers with decimal places (3.14). There are *lots* of other types, but we'll meet them soon enough.

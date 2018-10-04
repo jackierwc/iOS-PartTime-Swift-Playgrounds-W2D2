@@ -49,21 +49,28 @@ box1.area()
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
 
-
+class Bicycle {
+    var numberOfGears: Int = 7
+    var currentGear: Int = 2
+    
+    func gearUp() {currentGear = currentGear + 1}
+    
+    func gearDown() {currentGear = currentGear - 1}
+}
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
+var myBike = Bicycle()
 //
-//myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
+myBike.numberOfGears = 16 // upgrade!
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
 //
-//print("my bike is in the \(myBike.currentGear)rd gear")
+print("my bike is in the \(myBike.currentGear)rd gear")
 
 
 //: ## Challenge 2
@@ -107,11 +114,20 @@ brightBulb.watts
 //:
 //: Hint: don't forget to supply a number of gears when you create your bicycles!
 
+class bicycle {
+    let numberOfGears: Int
+    var currentGear: Int = 2
+    init(gears: Int) {
+        numberOfGears = gears}
+    
+    func gearUp() {currentGear = currentGear + 1}
+    
+    func gearDown() {currentGear = currentGear - 1}
+}
 
+var highGear = bicycle(gears: 10)
 
-
-
-
+highGear.numberOfGears
 
 
 
@@ -126,8 +142,18 @@ brightBulb.watts
 //: The syntax for subclassing can be found in the Swift Cheat Sheet included with this Playground.
 //:
 //: Hint: height * width * depth = the area of a cube
+class cube: Box {
+    var depth: Double = 0.0
+    
+    override func area() -> Double {return height*width*depth}
+}
 
+let myCube = cube()
+myCube.height = 2
+myCube.width = 2
+myCube.depth = 2
 
+myCube.area()
 
 
 //: DONE!!! - Head back to compass to do today's tutorial.
